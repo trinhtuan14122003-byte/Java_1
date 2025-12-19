@@ -231,7 +231,7 @@ public class Testing_2 {
 //			In ra tất cả các group "Java"
 		String[] groupNames = { "Java", "C#", "C++" };
 		for (String groupName : groupNames) {
-			if (groupNames.equals("Java")) {
+			if (groupName.equals("Java")) {
 				System.out.println("GroupName:");
 			}
 		}

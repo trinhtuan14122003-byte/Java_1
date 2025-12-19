@@ -1,4 +1,4 @@
-package VTI.entity;
+package Testing_4_Access_Modifier.entiy;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -65,39 +65,68 @@ public class Account {
 		this.createDate = createDate;
 	}
 
-	// Question 3:
-	// a không có
-	public void Group() {
-	}
-	// b
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + Arrays.hashCode(groups);
-		result = prime * result + Objects.hash(createDate, department, email, fullName, id, position, userName);
-		return result;
+	public int getId() {
+		return id;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj) {
-			return true;
-		}
-		if (obj == null) {
-			return false;
-		}
-		if (getClass() != obj.getClass()) {
-			return false;
-		}
-		Account other = (Account) obj;
-		return Objects.equals(createDate, other.createDate) && Objects.equals(department, other.department)
-				&& Objects.equals(email, other.email) && Objects.equals(fullName, other.fullName)
-				&& Arrays.equals(groups, other.groups) && id == other.id && Objects.equals(position, other.position)
-				&& Objects.equals(userName, other.userName);
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	// b) Có các parameter là GroupName, Creator, array Account[]
-	// accounts, CreateDate
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	public Position getPosition=() {
+		return position;
+	}
+
+	public void setPosition(Position position) {
+		this.position = position;
+	}
+
+	public LocalDate getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(LocalDate createDate) {
+		this.createDate = createDate;
+	}
+
+	public Group[] getGroups() {
+		return groups;
+	}
+
+	public void setGroups(Group[] groups) {
+		this.groups = groups;
+	}
+
 }

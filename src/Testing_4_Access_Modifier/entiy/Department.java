@@ -1,4 +1,4 @@
-package VTI.entity;
+package Testing_4_Access_Modifier.entiy;
 
 public class Department {
 	public int id;

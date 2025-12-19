@@ -1,4 +1,4 @@
-package VTI.entity;
+package Testing_4_Access_Modifier.entiy;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -51,4 +51,11 @@ public class Group {
 			accounts[i] = new Account(usernames[i]);
 		}
 		this.createDate = createDate;
+
+	}
+
+	public void showinfo_4() {
+		System.out.println("Group [id=" + id + ", name=" + name + ", creator=" + creator + ",Account "
+				+ Arrays.toString(accounts) + ", createDate=" + createDate);
+	}
 }

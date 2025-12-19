@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Account {
+public class Account2 {
 	public int id;
 	public String email;
 	public String userName;
@@ -22,13 +22,13 @@ public class Account {
 //	}
 
 	// a) Không có parameters
-	public Account(String usernames) {
+	public Account2() {
 	}
 
 	// b) Có các parameter là id, Email, Username, FirstName,
 	// LastName (với FullName = FirstName + LastName)
 
-	public Account(int id, String email, String userName) {
+	public Account2(int id, String email, String userName) {
 		this.id = id;
 		this.email = email;
 		this.userName = userName;
@@ -43,7 +43,7 @@ public class Account {
 	// c) Có các parameter là id, Email, Username, FirstName,
 	// LastName (với FullName = FirstName + LastName) và
 	// Position của User, default createDate = now
-	public Account(int id, String email, String userName, String fullName, Position position) {
+	public Account2(int id, String email, String userName, String fullName, Position position) {
 		this.id = id;
 		this.email = email;
 		this.userName = userName;
@@ -55,7 +55,7 @@ public class Account {
 	// d) Có các parameter là id, Email, Username, FirstName,
 	// LastName (với FullName = FirstName + LastName) và
 	// Position của User, createDate
-	public Account(int id, String email, String userName, String fullName, Position position, LocalDate createDate) {
+	public Account2(int id, String email, String userName, String fullName, Position position, LocalDate createDate) {
 		super();
 		this.id = id;
 		this.email = email;
@@ -91,7 +91,7 @@ public class Account {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		Account other = (Account) obj;
+		Account2 other = (Account2) obj;
 		return Objects.equals(createDate, other.createDate) && Objects.equals(department, other.department)
 				&& Objects.equals(email, other.email) && Objects.equals(fullName, other.fullName)
 				&& Arrays.equals(groups, other.groups) && id == other.id && Objects.equals(position, other.position)
