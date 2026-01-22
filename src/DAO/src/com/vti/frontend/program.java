@@ -1,0 +1,44 @@
+package com.vti.frontend;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.sql.SQLException;
+
+import com.vti.backend.DepartmentManagement;
+import com.vti.ulitis.ScannerUtils;
+
+public class program {
+	public static void main(String[] args)
+			throws FileNotFoundException, IOException, ClassNotFoundException, SQLException {
+		DepartmentManagement departmentManagement = new DepartmentManagement();
+
+		while (true) {
+			System.out.println("Mời bạn chọn chức năng");
+			System.out.println("1. Xem danh sách phòng ban");
+			System.out.println("2. Tìm phòng ban theo ID");
+			System.out.println("3. Thêm mới phòng ban");
+
+			int choose = ScannerUtils.inputInt();
+
+			switch (choose) {
+			case 1:
+//		1. Xem danh sách phòng ban
+				departmentManagement.showListDepartment();
+				break;
+			case 2:
+//		2. Tìm phòng ban theo ID
+				departmentManagement.showDepartmentByID();
+				break;
+			case 3:
+//		3. Thêm mới phòng ban
+				departmentManagement.createNewDepartment();
+
+				break;
+			default:
+				System.out.println("Nhập lại");
+				break;
+			}
+		}
+
+	}
+}
